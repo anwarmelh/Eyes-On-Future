@@ -1,0 +1,5 @@
+{
+  "type": "Lakehouse",
+  "displayName": "LK_weather_raw",
+  "description": "Contient les raw data. Pas de transformation ici"
+}

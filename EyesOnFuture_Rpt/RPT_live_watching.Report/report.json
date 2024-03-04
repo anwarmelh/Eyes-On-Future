@@ -1,0 +1,136 @@
+{
+  "config": "{\"version\":\"5.51\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU02\",\"version\":\"5.51\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU02",
+            "path": "BaseThemes/CY24SU02.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "items": [
+          {
+            "name": "dash2753644129168946.jpg",
+            "path": "dash2753644129168946.jpg",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'dash.jpg'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"dash2753644129168946.jpg\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Fill'\"}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"36D\"}}}}}],\"outspace\":[{\"properties\":{\"image\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}},\"url\":{\"expr\":{\"Literal\":{\"Value\":\"''\"}}}}}}}]}}",
+      "displayName": "Current",
+      "displayOption": 3,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1cc463322a60c0e06dff\",\"layouts\":[{\"id\":0,\"position\":{\"x\":36.259475135423365,\"y\":611.4285714285714,\"z\":5000,\"width\":245.71428571428572,\"height\":108.57142857142858,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Kusto Query Result.Temperature)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Temperature\"}},\"Function\":0},\"Name\":\"Sum(Kusto Query Result.Temperature)\",\"NativeReferenceName\":\"Temperature (C)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Temperature\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(Kusto Query Result.Temperature)\":{\"displayName\":\"Temperature (C)\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter7cd71a410cbd25bce167\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Kusto Query Result\"}},\"Property\":\"ObservationTime\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}},\"Function\":3}}}],\"Top\":1}}},\"Type\":2},{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":1}]",
+          "height": 108.57,
+          "width": 245.71,
+          "x": 36.26,
+          "y": 611.43,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"44fae23a0295d32206b1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":997.6880465639948,\"y\":408.5714285714286,\"z\":1000,\"width\":245.71428571428572,\"height\":105.71428571428572,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Kusto Query Result.Rain)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Rain\"}},\"Function\":0},\"Name\":\"Sum(Kusto Query Result.Rain)\",\"NativeReferenceName\":\"Precipitation (mm)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Rain\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(Kusto Query Result.Temperature)\":{\"displayName\":\"Last temperature\"},\"Sum(Kusto Query Result.Rain)\":{\"displayName\":\"Precipitation (mm)\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter7cd71a410cbd25bce167\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Kusto Query Result\"}},\"Property\":\"ObservationTime\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}},\"Function\":3}}}],\"Top\":1}}},\"Type\":2},{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":1}]",
+          "height": 105.71,
+          "width": 245.71,
+          "x": 997.69,
+          "y": 408.57,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"58a6ead48d381669bd5d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.830903706851934,\"y\":405.7142857142857,\"z\":0,\"width\":245.71428571428572,\"height\":107.14285714285715,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Kusto Query Result.Humidity)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Humidity\"}},\"Function\":0},\"Name\":\"Sum(Kusto Query Result.Humidity)\",\"NativeReferenceName\":\"Humidity\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Humidity\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(Kusto Query Result.Temperature)\":{\"displayName\":\"temperature\"},\"Sum(Kusto Query Result.Humidity)\":{\"displayName\":\"Humidity\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter7cd71a410cbd25bce167\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Kusto Query Result\"}},\"Property\":\"ObservationTime\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}},\"Function\":3}}}],\"Top\":1}}},\"Type\":2},{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":1}]",
+          "height": 107.14,
+          "width": 245.71,
+          "x": 34.83,
+          "y": 405.71,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"60960bb0906642e4f8e8\",\"layouts\":[{\"id\":0,\"position\":{\"x\":781.3841718002403,\"y\":5.239037072635407,\"z\":7000,\"width\":157,\"height\":103,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Kusto Query Result.City)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"City\"}},\"Function\":3},\"Name\":\"Min(Kusto Query Result.City)\",\"NativeReferenceName\":\"City\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 103.00,
+          "width": 157.00,
+          "x": 781.38,
+          "y": 5.24,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"652210f528e07fa4f04e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":334.38417180024044,\"y\":6.239052331424467,\"z\":8000,\"width\":447,\"height\":103,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Kusto Query Result.ObservationTime)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}},\"Function\":3},\"Name\":\"Min(Kusto Query Result.ObservationTime)\",\"NativeReferenceName\":\"ObservationTime (le plus ancien)\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}},\"Function\":3}}}]},\"columnProperties\":{\"Sum(Kusto Query Result.Temperature)\":{\"displayName\":\"Last temperature\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter7cd71a410cbd25bce167\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Kusto Query Result\"}},\"Property\":\"ObservationTime\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}},\"Function\":3}}}],\"Top\":1}}},\"Type\":2},{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":1}]",
+          "height": 103.00,
+          "width": 447.00,
+          "x": 334.38,
+          "y": 6.24,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"7b513403644cc722df82\",\"layouts\":[{\"id\":0,\"position\":{\"x\":334.38417180024044,\"y\":109.23905233142432,\"z\":6000,\"width\":604,\"height\":104,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Max(Kusto Query Result.Description)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Description\"}},\"Function\":4},\"Name\":\"Max(Kusto Query Result.Description)\",\"NativeReferenceName\":\"Dernier Description\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 104.00,
+          "width": 604.00,
+          "x": 334.38,
+          "y": 109.24,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"86c7fe4d21ebea4ffc12\",\"layouts\":[{\"id\":0,\"position\":{\"x\":997.6880465639948,\"y\":208.57142857142858,\"z\":3000,\"width\":245.71428571428572,\"height\":117.14285714285715,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Kusto Query Result.TemperatureMin)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"TemperatureMin\"}},\"Function\":0},\"Name\":\"Sum(Kusto Query Result.TemperatureMin)\",\"NativeReferenceName\":\"Min Temp (C)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"TemperatureMin\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(Kusto Query Result.Temperature)\":{\"displayName\":\"Last temperature\"},\"Sum(Kusto Query Result.TemperatureMin)\":{\"displayName\":\"Min Temp (C)\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter7cd71a410cbd25bce167\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Kusto Query Result\"}},\"Property\":\"ObservationTime\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}},\"Function\":3}}}],\"Top\":1}}},\"Type\":2},{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":1}]",
+          "height": 117.14,
+          "width": 245.71,
+          "x": 997.69,
+          "y": 208.57,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"b4d8e314d2a8135cc625\",\"layouts\":[{\"id\":0,\"position\":{\"x\":280,\"y\":300,\"z\":9000,\"width\":717.1428571428572,\"height\":311.42857142857144,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Kusto Query Result.Anomalies\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Anomalies\"},\"Name\":\"Kusto Query Result.Anomalies\",\"NativeReferenceName\":\"Anomalies\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"value\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}},{\"properties\":{\"horizontalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}},\"selector\":{\"id\":\"default\"}}],\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"image\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"imageType\":{\"expr\":{\"Literal\":{\"Value\":\"'imageUrl'\"}}},\"imageUrl\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Kusto Query Result\"}},\"Property\":\"Anomalies\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}},\"size\":{\"expr\":{\"Literal\":{\"Value\":\"700L\"}}},\"padding\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"position\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}},{\"properties\":{\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"35D\"}}}},\"selector\":{\"id\":\"default\"}}],\"layout\":[{\"properties\":{\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'top'\"}}},\"cellPadding\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Last word thermal anomalies'\"}}},\"bold\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"heading\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"null\"}}}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":3,\"Percent\":-0.25}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"18D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 311.43,
+          "width": 717.14,
+          "x": 280.00,
+          "y": 300.00,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"be608b0419706590f2ef\",\"layouts\":[{\"id\":0,\"position\":{\"x\":996.2594751354234,\"y\":611.4285714285714,\"z\":4000,\"width\":247.14285714285717,\"height\":108.57142857142858,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Kusto Query Result.TemperatureMax)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"TemperatureMax\"}},\"Function\":0},\"Name\":\"Sum(Kusto Query Result.TemperatureMax)\",\"NativeReferenceName\":\"Max Temp (C)\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"TemperatureMax\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(Kusto Query Result.Temperature)\":{\"displayName\":\"Last temperature\"},\"Sum(Kusto Query Result.TemperatureMax)\":{\"displayName\":\"Max Temp (C)\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter7cd71a410cbd25bce167\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Kusto Query Result\"}},\"Property\":\"ObservationTime\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}},\"Function\":3}}}],\"Top\":1}}},\"Type\":2},{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":1}]",
+          "height": 108.57,
+          "width": 247.14,
+          "x": 996.26,
+          "y": 611.43,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"e33f10f6fb3aabed3c31\",\"layouts\":[{\"id\":0,\"position\":{\"x\":34.830903706851934,\"y\":208.57142857142858,\"z\":2000,\"width\":247.14285714285717,\"height\":117.14285714285715,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(Kusto Query Result.Pressure)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Pressure\"}},\"Function\":0},\"Name\":\"Sum(Kusto Query Result.Pressure)\",\"NativeReferenceName\":\"Pressure\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"Pressure\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(Kusto Query Result.Temperature)\":{\"displayName\":\"Last temperature\"},\"Sum(Kusto Query Result.Pressure)\":{\"displayName\":\"Pressure\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"14D\"}}}}}]}}}",
+          "filters": "[{\"name\":\"Filter7cd71a410cbd25bce167\",\"expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Kusto Query Result\"}},\"Property\":\"ObservationTime\"}},\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"subquery\",\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"},\"Name\":\"field\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}},\"Function\":3}}}],\"Top\":1}}},\"Type\":2},{\"Name\":\"k\",\"Entity\":\"Kusto Query Result\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"k\"}},\"Property\":\"ObservationTime\"}}],\"Table\":{\"SourceRef\":{\"Source\":\"subquery\"}}}}}]},\"type\":\"TopN\",\"howCreated\":1}]",
+          "height": 117.14,
+          "width": 247.14,
+          "x": 34.83,
+          "y": 208.57,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
